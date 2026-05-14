@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://homelabhq.es/sitemap.xml

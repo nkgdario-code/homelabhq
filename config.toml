@@ -1,0 +1,14 @@
+# Homelab HQ — Tu servidor en casa, paso a paso
+
+baseURL = "https://homelabhq.es"
+languageCode = "es-ES"
+title = "Homelab HQ — Tu servidor en casa"
+defaultContentLanguage = "es"
+buildFuture = true
+
+[params]
+  description = "Guías y tutoriales para montar tu propio homelab. Servidores, Docker, redes, self-hosting y automatización del hogar."
+  author = "HomelabHQ"
+
+[markup.goldmark.renderer]
+  unsafe = true

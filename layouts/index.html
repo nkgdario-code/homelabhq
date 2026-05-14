@@ -1,0 +1,28 @@
+{{ define "main" }}
+<section class="hero">
+  <h1>Monta tu <span class="accent">servidor en casa</span> sin ser experto</h1>
+  <p class="hero-sub">Guías paso a paso para montar tu homelab: Docker, servidores, redes y automatización del hogar.</p>
+  <a href="/posts/" class="btn-primary">Ver guías →</a>
+</section>
+<section class="featured">
+  <h2>Últimas guías</h2>
+  <div class="posts-grid">
+    {{ range first 6 (where .Site.RegularPages "Section" "posts") }}
+    <article class="post-card"><a href="{{ .Permalink }}">
+      <h3>{{ .Title }}</h3>
+      <p>{{ .Summary }}</p>
+      <span class="post-date">{{ .Date.Format "2 de enero de 2006" }}</span>
+    </a></article>
+    {{ end }}
+  </div>
+</section>
+<section class="cta">
+  <h2>📩 Recibe guías de homelab cada semana</h2>
+  <p>Tutoriales prácticos para montar tu servidor en casa.</p>
+  <form class="newsletter-form" action="/api/subscribe" method="POST">
+    <input type="email" name="email" placeholder="tu@email.com" required>
+    <button type="submit">Suscribirme →</button>
+  </form>
+  <p class="note">Sin spam. Una guía a la semana.</p>
+</section>
+{{ end }}

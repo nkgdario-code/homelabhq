@@ -1,0 +1,12 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ if .IsHome }}Homelab HQ — Tu servidor en casa{{ else }}{{ .Title }} | HomelabHQ{{ end }}</title>
+<meta name="description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}Guías de homelab, servidores, Docker y self-hosting en español.{{ end }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<meta property="og:title" content="{{ if .IsHome }}Homelab HQ{{ else }}{{ .Title }}{{ end }}">
+<meta property="og:description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}Monta tu servidor en casa con estas guías.{{ end }}">
+<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="HomelabHQ">
+<meta property="og:locale" content="es_ES">
+<link rel="stylesheet" href="/css/style.css">

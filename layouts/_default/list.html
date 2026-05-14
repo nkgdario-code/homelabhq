@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="list-page">
+  <h1>Guías de homelab</h1>
+  <p>Todas las guías para montar tu servidor en casa.</p>
+  <div class="posts-list">
+    {{ range .Pages }}
+    <article class="post-item">
+      <time class="post-meta">{{ .Date.Format "02/01/2006" }}</time>
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <p>{{ .Summary }}</p>
+      <a href="{{ .Permalink }}" class="read-more">Leer guía →</a>
+    </article>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

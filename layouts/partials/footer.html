@@ -1,0 +1,15 @@
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-logo">🏠 <span class="accent">HOMELAB</span> HQ</p>
+    <p class="footer-desc">Guías prácticas para montar tu propio servidor en casa.</p>
+    <p class="footer-bottom">© 2026 HomelabHQ. info@homelabhq.es</p>
+  </div>
+</footer>
+<script>
+document.querySelectorAll('.newsletter-form').forEach(f=>f.addEventListener('submit',async function(e){
+  e.preventDefault();const b=this.querySelector('button');const i=this.querySelector('input');
+  const email=i.value.trim();const o=b.textContent;b.disabled=true;b.textContent='Enviando...';
+  try{const r=await fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email})});
+  const d=await r.json();if(d.success){this.innerHTML='<p class="ok">✅ ¡Suscrito!</p>'}else{b.textContent=o;b.disabled=false;alert('Error')}}
+  catch(e){b.textContent=o;b.disabled=false;alert('Error de conexión')}}));
+</script>
