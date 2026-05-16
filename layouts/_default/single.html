@@ -7,18 +7,14 @@
   <div class="post-content">{{ .Content }}</div>
 
   <footer class="post-footer">
-    <h3>¿Te sirvió?</h3>
-    <p>Comparte este artículo y ayuda a la comunidad homelab.</p>
-    <div class="share-buttons">
-      <a href="https://wa.me/?text={{ .Title }}%20{{ .Permalink }}" target="_blank" rel="noopener">💬 WhatsApp</a>
-      <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink }}" target="_blank" rel="noopener">💼 LinkedIn</a>
-    </div>
+    <h3>¿Te sirvio?</h3>
+    <p>Deja un comentario abajo y comparte tu experiencia.</p>
   </footer>
 
   <section class="newsletter-inline">
     <div class="newsletter-card">
-      <h3>📩 ¿Quieres más guías como esta?</h3>
-      <p>Suscríbete y recibe contenido nuevo cada semana.</p>
+      <h3>📩 ¿Quieres mas guias como esta?</h3>
+      <p>Suscribete y recibe contenido nuevo cada semana.</p>
       <form class="newsletter-form" action="/api/subscribe" method="POST">
         <input type="email" name="email" placeholder="tu@email.com" required>
         <button type="submit">Suscribirme</button>
